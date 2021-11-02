@@ -1,99 +1,7 @@
 @import '/CSS/variabels.css';
+@import'/CSS/styled-component.css';
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto Slab, Roboto;
-}
-
-ul,
-a {
-    list-style: none;
-    text-decoration: none;
-}
-
-.container {
-    margin: 0 13%;
-
-}
-
-.card {
-    width: 28rem;
-    height: 27.25rem;
-    background-color: white;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.card h3 {
-    font-family: roboto Slab;
-    font-size: var(--text-size-h3);
-    color: var(--text-black-color);
-    font-weight: 500;
-
-}
-
-.card p {
-    text-align: center;
-    font-family: roboto;
-    font-size: var(--text-size-para);
-    padding: 0 4.2rem 4.5rem 4.2rem;
-    font-weight: 400;
-}
-
-.cirkel {
-    height: 7.5rem;
-    width: 7.5rem;
-    margin: 4rem 0 2rem 0;
-    background-color: var(--green-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cirkel:hover {
-    cursor: pointer;
-    background-color: var(--blue-color);
-    transition: 0.3s;
-}
-
-.row {
-    display: flex;
-}
-
-.h1 h1 {
-    margin: 0;
-}
-
-.h1 .border {
-    border-bottom: 4px solid var(--green-color);
-    width: 50%;
-
-}
-
-.border-bottom {
-    border-bottom: 1px solid var(--border-gray-color);
-
-}
-
-.bg-primary {
-    background-color: var(--blue-color);
-}
-
-.color-primary {
-    color: var(--blue-color);
-}
-
-.bg-success {
-    background-color: var(--green-color);
-}
 
 /* -----------  Header  ----------- */
 .top-menu {
@@ -150,7 +58,32 @@ a {
     color: var(--text-black-color);
 }
 
+.main-menu a:hover {
+    color: var(--blue-color);
+    transition: 0.2s;
+}
 
+/* -----------  Media Queries max-width: 1050px  ----------- */
+
+@media screen and (max-width: 1050px) {
+    .main-menu ul {
+        display: none;
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .top-menu .ul-left {
+        display: none;
+    }
+
+    .top-menu {
+        display: flex;
+        justify-content: center;
+    }
+}
 
 /* -----------  SECTION-1- showcase  ----------- */
 
@@ -186,6 +119,79 @@ aside p {
     border: none;
     padding: 1.2rem 3.5rem;
     border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: var(--blue-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+/* -----------  Media Queries max-width: 1600px  ----------- */
+
+@media screen and (max-width: 1600px) {
+    .showcase {
+
+        padding: 1.3125rem 8% 0 8%;
+    }
+
+    aside h1 {
+
+        font-size: 3rem;
+        font-weight: 200;
+
+    }
+}
+
+/* -----------  Media Queries max-width: 1500px  ----------- */
+
+@media screen and (max-width: 1500px) {
+    .showcase {
+
+        padding: 1.3125rem 5% 0 5%;
+    }
+
+    aside h1 {
+
+        font-size: 2.5rem;
+        font-weight: 200;
+
+    }
+
+
+}
+
+/* -----------  Media Queries max-width: 1130px  ----------- */
+
+@media screen and (max-width: 1130px) {
+    .showcase img {
+
+        display: none;
+    }
+
+    .showcase {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    aside p,
+    h1 {
+        padding: 0 5%;
+        text-align: center;
+    }
+
 }
 
 /* -----------  SECTION-2- about us  ----------- */
@@ -247,6 +253,19 @@ aside p {
     margin-right: 7rem;
 }
 
+/* -----------  Media Queries max-width: 1530px  ----------- */
+
+@media screen and (max-width: 1530px) {
+    .about-us img {
+        display: none;
+    }
+
+    .about-us {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 /* -----------  SECTION-3- services  ----------- */
 
 .Our-servise {
@@ -277,6 +296,8 @@ aside p {
     margin: 1.875rem 0 4.2rem 0;
 }
 
+
+
 /* -----------  appointment  ----------- */
 
 .appointment {
@@ -306,6 +327,14 @@ aside p {
     padding: 0.8rem 3.5rem;
     border-radius: 10px;
     background-color: white;
+}
+
+.appointment button:hover {
+    background-color: var(--green-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+
 }
 
 /* -----------  Footer  ----------- */
