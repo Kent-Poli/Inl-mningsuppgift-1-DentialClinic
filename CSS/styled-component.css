@@ -5,6 +5,11 @@
     font-family: Roboto Slab, Roboto;
 }
 
+body,
+html {
+    line-height: 1.6;
+}
+
 ul,
 a {
     list-style: none;
